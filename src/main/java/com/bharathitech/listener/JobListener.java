@@ -33,7 +33,7 @@ public class JobListener extends JobExecutionListenerSupport {
     @Override
     public void afterJob(JobExecution jobExecution) {
         if(jobExecution.getStatus() == BatchStatus.COMPLETED) {
-            jdbcTemplate.query("select EMPLOYEE_ID,EMPOYEE_NAME,EMP_ROLE,SALARY,EXPERIENCE from EMMPLOYEE ",
+            jdbcTemplate.query("select EMP_ID,EMP_NAME,EMP_ROLE,SALARY,YEAR_OF_EXPR from EMPLOYEE ",
                 (rs,rowNum)->{
                     return new EmployeeDTO(rs.getLong(1), rs.getString(2),rs.getString(3),rs.getString(4),
                         rs.getInt(5));

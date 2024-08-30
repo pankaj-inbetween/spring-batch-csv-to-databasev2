@@ -66,7 +66,7 @@ public class EmployeeJob {
         reader.setLinesToSkip(1);
         reader.setLineMapper(new DefaultLineMapper<EmployeeModel>() {{
             setLineTokenizer(new DelimitedLineTokenizer() {{
-                setNames(new String[] { "employee_id","emp_name","emp_role","salary","year_of_experience" });
+                setNames(new String[] { "emp_id","emp_name","emp_role","salary","YEAR_OF_EXPR" });
             }});
             setFieldSetMapper(new BeanWrapperFieldSetMapper() {{
                 setTargetType(EmployeeModel.class);

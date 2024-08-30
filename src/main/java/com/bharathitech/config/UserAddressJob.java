@@ -95,7 +95,7 @@ public class UserAddressJob {
         JdbcBatchItemWriter<AddressDTO> writer = new JdbcBatchItemWriter<AddressDTO>();
         writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>());
         writer.setSql("INSERT INTO ADDRESS (NAME,ADDRESS1,ADDRESS2,ZIP_CODE,CITY,COUNTRY) " +
-                "VALUES (:name,:address1,:address2,:city,:country)");
+                "VALUES (:name,:address1,:address2,:zipCode,:city,:country)");
         writer.setDataSource(dataSource);
         return writer;
     }

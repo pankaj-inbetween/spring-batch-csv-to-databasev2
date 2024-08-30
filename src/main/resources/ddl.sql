@@ -4,17 +4,19 @@ CREATE TABLE ADDRESS
    ADDRESS1     VARCHAR(255),
    ADDRESS2     VARCHAR(255),
    ZIP_CODE      INT,
-   CITY   	     VARCHAR(100), 
-   COUNTRY       VARCHAR(100)  
-   
+   CITY   	     VARCHAR(100),
+   COUNTRY       VARCHAR(100)
+
 );
 
  CREATE TABLE EMPLOYEE
- ( 
+ (
  EMP_ID        INT NOT NULL,
  EMP_NAME      VARCHAR2(200 CHAR),
  EMP_ROLE      VARCHAR2(200 CHAR),
  SALARY        VARCHAR2(200 CHAR),
  YEAR_OF_EXPR  INT
- ); 
- 
+ );
+
+select * from ADDRESS;
+select * from EMPLOYEE;
